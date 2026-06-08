@@ -7,6 +7,8 @@ This project is not about the application itself (it's intentionally minimal).
 The focus is the **infrastructure and automation** around it: containerization,
 CI/CD, cloud deployment, and monitoring.
 
+**Live demo:** [http://98.82.190.66](http://98.82.190.66) · [/health](http://98.82.190.66/health)
+
 ## Architecture
 
 ```mermaid
