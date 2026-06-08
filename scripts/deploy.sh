@@ -49,8 +49,10 @@ release() {
 
     docker tag "${image}:${tag}" "${image}:latest"
 
-    log "Restarting web service with ${image}:${tag}"
-    docker compose -f "$COMPOSE_FILE" up -d --no-deps web
+    log "Bringing up stack with ${image}:${tag}"
+    # No --no-deps: this also (re)creates db/nginx on a fresh host, while
+    # leaving them untouched on redeploys where only the web image changed.
+    docker compose -f "$COMPOSE_FILE" up -d
 }
 
 cd "$PROJECT_DIR"
