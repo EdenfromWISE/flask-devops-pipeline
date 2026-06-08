@@ -108,6 +108,6 @@ flask-devops-pipeline/
 - [x] Multi-stage Dockerfile with non-root user
 - [x] Docker Compose (app + PostgreSQL + Nginx)
 - [x] CI pipeline — automated tests on every push
-- [ ] CD pipeline — build & push to Docker Hub
-- [ ] Deployment to AWS EC2 with automated rollback
-- [ ] Monitoring via cron + Bash scripts
+- [x] CD pipeline — build & push to Docker Hub (tagged `latest` + commit SHA)
+- [x] Automated deployment to AWS EC2 with health-check verification and rollback
+- [x] Monitoring via cron + Bash scripts (CPU/RAM/disk/containers/endpoint)
