@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - APP_VERSION=1.0.0
+    container_name: flask_app
+    restart: unless-stopped
+    
+
